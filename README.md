@@ -1,19 +1,77 @@
-**TO-DO**, version 1.0.
-TUI based simple daily task tracking application.
-Commands are defined internally type `help` to see the list.
-Completed tasks have **[[x]]** in front of them. Completed tasks can not be individually deleted.
-Incomplete tasks have **[[(task number)]]** in front of them. Incomplete tasks can be individually deleted.
+# TO-DO
 
-*Commands :-*
+**Version 1.0**  
+Simple TUI-based daily task tracking application written in **C**
 
-`add` - Adds new task. [add "task you need to add"]
-`done` - Marks a task as done. [done (task number, for example 1)]
-`clear` - Deletes all the done tasks. [clear]
-`delete` - Deletes an incomplete task. [delete (task number, for example 1)]
-`delete all` - Deletes all complete and incomplete tasks. [delete all]
+A minimal, terminal-only to-do list program.  
+No external libraries. Just standard C.
 
-`show task` - Shows all complete and incomplete tasks. [show task]
-`show incomplete` - Shows all incomplete tasks. [show incomplete]
-`show complete/done` - shows all Completed/Done tasks. [show done], [show complete]
+Tasks are stored in plain text files and shown with this style:
+[[3]]   Finish math assignment
+[[7]]   Buy groceries before 8 PM
+[[x]]   Water the plants
+[[x]]   Call dentist
+text- `[[x]]` → completed task  
+- `[[number]]` → pending task (use the number with `done` / `delete`)
 
-`exit` - Saves changes and exits app. [exit]
+## Commands
+1. add "task description"          →  add new task
+2. done <number>                   →  mark task as done
+3. delete <number>                 →  remove incomplete task
+4. clear                           →  remove all completed tasks
+5. delete all                      →  delete everything (confirmation needed?)
+6. show task                       →  show all tasks (default)
+7. show incomplete                 →  show only pending tasks
+8. show complete   /  show done    →  show only completed tasks
+9. help                            →  show this help
+10. exit                            →  save & quit
+textType `help` inside the program to see the command list.
+
+## Project File Structure
+```
+TO-DO
+├── README.md              # this file
+├── main.c                 # main source code
+├── main                   # compiled binary (gitignored or not committed)
+├── incomplete.txt         # pending tasks
+├── complete.txt           # finished tasks
+└── help.txt               # help text shown by help command
+```
+textData is kept in two separate files:
+- `incomplete.txt` — tasks that are not yet done
+- `complete.txt`   — tasks marked as done
+
+This separation makes `clear` very fast (just truncate `complete.txt`).
+
+## Build & Run
+
+```bash
+# Compile
+gcc -Wall -Wextra -O2 -o todo main.c
+
+# or just
+gcc -o todo main.c
+
+# Run
+./todo
+First run will create incomplete.txt, complete.txt and help.txt if they don't exist.
+Features / Design Notes
+
+Very small binary size
+No ncurses / no curses dependency
+Human-readable plain text storage
+Completed tasks are preserved until you run clear
+Simple numbered reference system
+Runs in any terminal (even very basic ones)
+
+Possible future additions (maybe)
+
+Due dates / priority
+Simple search
+Categories / projects
+Colors (if terminal supports)
+Single file storage option
+Backup / export command
+
+License
+MIT License
