@@ -46,32 +46,26 @@ This separation makes `clear` very fast (just truncate `complete.txt`).
 ## Build & Run
 
 ```bash
-# Compile
-gcc -Wall -Wextra -O2 -o todo main.c
+# clone
+git clone https://github.com/tanvir-techbro/TO-DO.git
 
-# or just
-gcc -o todo main.c
+#get in the folder
+cd TO-DO
 
 # Run
 ./todo
-First run will create incomplete.txt, complete.txt and help.txt if they don't exist.
-Features / Design Notes
+```
 
-Very small binary size
-No ncurses / no curses dependency
-Human-readable plain text storage
-Completed tasks are preserved until you run clear
-Simple numbered reference system
-Runs in any terminal (even very basic ones)
+##Features / Design Notes:
 
-Possible future additions (maybe)
+Very small binary size.
+No ncurses / no curses dependency.
+Human-readable plain text storage.
+Completed tasks are preserved until you run clear.
+Simple numbered reference system.
+Runs in any terminal (even very basic ones).
 
-Due dates / priority
-Simple search
-Categories / projects
-Colors (if terminal supports)
-Single file storage option
-Backup / export command
+All contributions are welcome. Fork it and contribute to it as much as you wish.
 
 License
 MIT License
