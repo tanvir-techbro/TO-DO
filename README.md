@@ -52,6 +52,9 @@ git clone https://github.com/tanvir-techbro/TO-DO.git
 #get in the folder
 cd TO-DO
 
+#compile
+gcc main.c -o todo
+
 # Run
 ./todo
 ```
@@ -67,5 +70,5 @@ cd TO-DO
 
 All contributions are welcome. Fork it and contribute to it as much as you wish.
 
-License
+### License
 MIT License
