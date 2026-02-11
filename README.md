@@ -7,11 +7,11 @@ A minimal, terminal-only to-do list program.
 No external libraries. Just standard C.
 
 Tasks are stored in plain text files and shown with this style:
-[[3]]   Finish math assignment
-[[7]]   Buy groceries before 8 PM
-[[x]]   Water the plants
-[[x]]   Call dentist
-text- `[[x]]` → completed task  
+- [[3]]   Finish math assignment
+- [[7]]   Buy groceries before 8 PM
+- [[x]]   Water the plants
+- [[x]]   Call dentist
+text - `[[x]]` → completed task  
 - `[[number]]` → pending task (use the number with `done` / `delete`)
 
 ## Commands
@@ -56,14 +56,14 @@ cd TO-DO
 ./todo
 ```
 
-##Features / Design Notes:
+## Features / Design Notes:
 
-Very small binary size.
-No ncurses / no curses dependency.
-Human-readable plain text storage.
-Completed tasks are preserved until you run clear.
-Simple numbered reference system.
-Runs in any terminal (even very basic ones).
+- Very small binary size.
+- No ncurses / no curses dependency.
+- Human-readable plain text storage.
+- Completed tasks are preserved until you run clear.
+- Simple numbered reference system.
+- Runs in any terminal (even very basic ones).
 
 All contributions are welcome. Fork it and contribute to it as much as you wish.
 
