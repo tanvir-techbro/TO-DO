@@ -1,0 +1,10 @@
+`add` - Adds new task. [add "task you need to add"]
+`done` - Marks a task as done. [done (task number, for example 1)]
+`clear` - Deletes all the done tasks. [clear]
+`delete` - Deletes an incomplete task. [delete (task number, for example 1)]
+
+`show task` - Shows all complete and incomplete tasks. [show task]
+`show incomplete` - Shows all incomplete tasks. [show incomplete]
+`show complete/done` - shows all Completed/Done tasks. [show done], [show complete]
+
+`exit` - Saves changes and exits app. [exit]
