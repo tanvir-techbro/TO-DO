@@ -33,7 +33,6 @@ TO-DO
 ├── README.md              # this file
 ├── LICENSE                # MIT license 
 ├── main.c                 # main source code
-├── main                   # compiled binary (gitignored or not committed)
 ├── incomplete.txt         # pending tasks
 ├── complete.txt           # finished tasks
 └── help.txt               # help text shown by help command
